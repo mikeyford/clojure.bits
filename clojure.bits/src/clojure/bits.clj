@@ -1,7 +1,20 @@
 (ns clojure.bits)
 
-;4clojure #26
-;Fibonacci with tail recursion
+
+;4clojure #35, find odd numbers
+;for test over sequence using :when
+#(for [x %
+     :when (odd? x)]
+      x)
+
+
+;4clojure #22, count element without (count)
+;run a count across a sequence with reduce
+#(reduce (fn [c _] (inc c)) 0 %)
+
+
+;4clojure #26, Fibonacci
+;tail recursion
 (fn fib
   ([n] (fib n [1 1]))
   ([n c]
