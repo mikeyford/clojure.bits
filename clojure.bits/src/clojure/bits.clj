@@ -20,4 +20,5 @@
   ([n c]
    (if (= (count c) n)
      c
-     (fib n (conj c (+ (last (drop-last c)) (last c)))))))
+     (fib n (conj c (+ (last (drop-last c)) (last c))))
+)))
