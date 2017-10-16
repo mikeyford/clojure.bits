@@ -14,7 +14,7 @@
 
 
 ;4clojure #26, Fibonacci
-;tail recursion
+;tail recursion and multiple arity
 (fn fib
   ([n] (fib n [1 1]))
   ([n c]
