@@ -21,10 +21,6 @@
   ([n c]
    (if (= (count c) n)
      c
-<<<<<<< HEAD
-     (fib n (conj c (+ (last (drop-last c)) (last c)))))))
-
-=======
      (fib n (conj c (+ (last (drop-last c)) (last c))))
 )))
->>>>>>> 00c3e47734bc86c3e8168fd638f3502e05793791
+
