@@ -1,5 +1,6 @@
-(ns clojure.bits)
-
+(ns clojure.bits
+  (:require [clojure.core.matrix.operators :as M])
+  (:use clojure.core.matrix))
 
 ;4clojure #35, find odd numbers
 ;for test over sequence using :when
@@ -21,3 +22,4 @@
    (if (= (count c) n)
      c
      (fib n (conj c (+ (last (drop-last c)) (last c)))))))
+
