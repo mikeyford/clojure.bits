@@ -24,3 +24,8 @@
      (fib n (conj c (+ (last (drop-last c)) (last c))))
 )))
 
+
+;4clojure #38, max without (max) and variable args not as vector
+;use of [& args] for multiple arguments
+(fn [& args]
+  (last (sort args)))
