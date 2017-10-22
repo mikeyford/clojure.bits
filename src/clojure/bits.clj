@@ -1,5 +1,6 @@
 (ns clojure.bits
-  (:require [clojure.core.matrix.operators :as M])
+  (:require [clojure.core.matrix.operators :as M]
+            [kixi.stats.random :as ran])
   (:use clojure.core.matrix))
 
 ;4clojure #35, find odd numbers
@@ -29,3 +30,11 @@
 ;use of [& args] for multiple arguments
 (fn [& args]
   (last (sort args)))
+
+
+;define list of symbols
+;using kixi.stats to assign random samples from normal distribution
+(defn sample_norm [list]
+  (doseq [x list]
+    (intern *ns* (symbol x) (ran/draw (ran/normal {:mu 0, :sd 1})))
+    ))

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Leiningen: org.clojure/data.avl:0.0.17">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/clojure/data.avl/0.0.17/data.avl-0.0.17.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
