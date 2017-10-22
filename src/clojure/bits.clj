@@ -1,7 +1,8 @@
 (ns clojure.bits
-  (:require [clojure.core.matrix.operators :as M]
+  (:require [clojure.core.matrix.operators :as m]
             [kixi.stats.random :as ran])
   (:use clojure.core.matrix))
+
 
 ;4clojure #35, find odd numbers
 ;for test over sequence using :when
