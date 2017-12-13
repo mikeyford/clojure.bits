@@ -1,6 +1,9 @@
 (ns clojure.bits
   (:require [clojure.core.matrix.operators :as m]
-            [kixi.stats.random :as ran])
+            [kixi.stats.random :as ran]
+            [pdfboxing.text :as PDFBoxingText]
+            
+            b)
   (:use clojure.core.matrix))
 
 
@@ -39,3 +42,8 @@
   (doseq [x list]
     (intern *ns* (symbol x) (ran/draw (ran/normal {:mu 0, :sd 1})))
     ))
+
+
+;;print out intermediate text content produced by function
+(with-open [in-file (clojure.java.io/writer "/Users/michaelford/file.txt")]
+  (.write in-file (a-text-producing-function)))                                                         
